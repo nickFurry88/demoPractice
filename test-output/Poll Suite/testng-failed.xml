@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Poll Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Login to Create Poll page(failed)">
+    <groups>
+      <run>
+        <include name="login"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.app.gethyphen.tests.LoginOtp">
+        <methods>
+          <include name="openLoginPage"/>
+          <include name="otpLoginPage"/>
+        </methods>
+      </class> <!-- com.app.gethyphen.tests.LoginOtp -->
+    </classes>
+  </test> <!-- Login to Create Poll page(failed) -->
+</suite> <!-- Failed suite [Poll Suite] -->
