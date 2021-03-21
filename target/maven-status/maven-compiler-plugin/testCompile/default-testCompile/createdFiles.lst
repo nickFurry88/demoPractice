@@ -1,8 +1,0 @@
-com\app\gethyphen\testbase\TestBase.class
-com\app\gethyphen\tests\CreatePollTest.class
-com\app\gethyphen\testPages\CreatePollPage.class
-com\app\gethyphen\tests\LoginOtp.class
-com\app\gethyphen\testPages\VerificationPage.class
-com\app\gethyphen\testPages\LoginPage.class
-com\app\gethyphen\config\Config.class
-com\app\gethyphen\testPages\BaseTestPage.class

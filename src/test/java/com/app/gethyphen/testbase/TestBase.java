@@ -16,25 +16,28 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.app.gethyphen.config.Config;
 
 public class TestBase {
 
-	protected WebDriver driver;
+	public static WebDriver driver;
 
 	public WebDriver getDriver()
 	{
 		return driver;
 	}
-	public void setDriver(WebDriver driver)
+	public static void setDriver(WebDriver driver)
 	{
-		this.driver= driver;
+		TestBase.driver= driver;
 	}
 
+	// run before suite and take Environment parameter from testNG xml file
 	@BeforeSuite
-	public void beforeSuite() throws Exception{
-		Config.setProperties("Production");
+	@Parameters({"env"})
+	public void beforeSuite(String env) throws Exception{
+		Config.setProperties(env);
 		setBrowser();
 	}
 
@@ -94,9 +97,11 @@ public class TestBase {
 	}
 	
 
-	/*
-	 * @AfterSuite public void closeBrowser() { getDriver().quit(); }
-	 */
+	@AfterSuite 
+	public void closeBrowser() {
+		 getDriver().quit(); 
+	}
+	 
 
 	public String screenShot(ITestResult result) throws Exception {
 		String folder =  System.getProperty("user.dir")

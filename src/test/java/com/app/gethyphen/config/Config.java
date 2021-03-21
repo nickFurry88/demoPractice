@@ -14,7 +14,7 @@ public class Config {
 		
 		Properties p = new Properties();
         p.load((new FileInputStream(System.getProperty("user.dir") + "/configFiles/demo.properties")));
-        System.out.println(p.toString());
+        //System.out.println(p.toString());
         url = p.getProperty(environment+".URL");
         browser = p.getProperty(environment+".browser").toUpperCase();
         mode = p.getProperty(environment+".mode").toLowerCase();

@@ -5,6 +5,7 @@ import com.app.gethyphen.testPages.LoginPage;
 import com.app.gethyphen.testPages.VerificationPage;
 import com.app.gethyphen.testbase.TestBase;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class LoginOtp extends TestBase{
@@ -13,6 +14,7 @@ public class LoginOtp extends TestBase{
 	public void openLoginPage() {
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 		loginPage.openLoginPage();
+		Reporter.log("Opened Login Page");
 		
 		try{
 			loginPage.login(Config.email);
@@ -30,17 +32,5 @@ public class LoginOtp extends TestBase{
 			e.printStackTrace();
 		}
 	}
-	
-	/*@Test (dependsOnMethods= {"otpLoginPage"})
-	public void logout() {
-		HomePage homepage = PageFactory.initElements(driver, HomePage.class);
-		try {
-			homepage.logout();
-			LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-			loginPage.verifyLoginPage();
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-	}*/
 
 }

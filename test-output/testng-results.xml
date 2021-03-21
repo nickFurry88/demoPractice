@@ -1,64 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+<testng-results ignored="4" total="8" passed="4" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Opening the Sign Up/Log In page]]>
+    </line>
+    <line>
+      <![CDATA[Opened Login Page]]>
+    </line>
+    <line>
+      <![CDATA[Entered email id]]>
+    </line>
+    <line>
+      <![CDATA[Submitted the email id]]>
+    </line>
+    <line>
+      <![CDATA[Entered the otp]]>
+    </line>
+    <line>
+      <![CDATA[Submitted the otp]]>
+    </line>
+    <line>
+      <![CDATA[Create new post button clicked]]>
+    </line>
+    <line>
+      <![CDATA[The Anonymous type is selected]]>
+    </line>
+    <line>
+      <![CDATA[The Open button is clicked]]>
+    </line>
+    <line>
+      <![CDATA[Clicking the drop down to select group type]]>
+    </line>
+    <line>
+      <![CDATA[Selected the group]]>
+    </line>
+    <line>
+      <![CDATA[Group selected, clicked on Select button]]>
+    </line>
+    <line>
+      <![CDATA[Text is entered in text box]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Publish button]]>
+    </line>
+    <line>
+      <![CDATA[Poll is published]]>
+    </line>
+    <line>
+      <![CDATA[Logging out]]>
+    </line>
+    <line>
+      <![CDATA[Logged out successfully]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-03-21T00:09:13 IST" name="Suite" finished-at="2021-03-21T00:09:21 IST" duration-ms="8028">
+  <suite started-at="2021-03-22T04:41:19 IST" name="Suite" finished-at="2021-03-22T04:41:42 IST" duration-ms="23176">
     <groups>
       <group name="createPoll">
-        <method signature="CreatePollTest.startPoll()[pri:0, instance:com.app.gethyphen.tests.CreatePollTest@4bb33f74]" name="startPoll" class="com.app.gethyphen.tests.CreatePollTest"/>
+        <method signature="CreatePollTest.startPoll(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.app.gethyphen.tests.CreatePollTest@73700b80]" name="startPoll" class="com.app.gethyphen.tests.CreatePollTest"/>
       </group> <!-- createPoll -->
+      <group name="logout">
+        <method signature="Logout.logout()[pri:0, instance:com.app.gethyphen.tests.Logout@49c7b90e]" name="logout" class="com.app.gethyphen.tests.Logout"/>
+      </group> <!-- logout -->
       <group name="login">
-        <method signature="LoginOtp.openLoginPage()[pri:0, instance:com.app.gethyphen.tests.LoginOtp@14555e0a]" name="openLoginPage" class="com.app.gethyphen.tests.LoginOtp"/>
-        <method signature="LoginOtp.otpLoginPage()[pri:1, instance:com.app.gethyphen.tests.LoginOtp@14555e0a]" name="otpLoginPage" class="com.app.gethyphen.tests.LoginOtp"/>
+        <method signature="LoginOtp.openLoginPage()[pri:0, instance:com.app.gethyphen.tests.LoginOtp@6f46426d]" name="openLoginPage" class="com.app.gethyphen.tests.LoginOtp"/>
+        <method signature="LoginOtp.otpLoginPage()[pri:1, instance:com.app.gethyphen.tests.LoginOtp@6f46426d]" name="otpLoginPage" class="com.app.gethyphen.tests.LoginOtp"/>
       </group> <!-- login -->
     </groups>
-    <test started-at="2021-03-21T00:09:13 IST" name="Test" finished-at="2021-03-21T00:09:21 IST" duration-ms="8028">
+    <test started-at="2021-03-22T04:41:19 IST" name="Test" finished-at="2021-03-22T04:41:42 IST" duration-ms="23176">
+      <class name="com.app.gethyphen.tests.Logout">
+        <test-method signature="logout()[pri:0, instance:com.app.gethyphen.tests.Logout@49c7b90e]" started-at="2021-03-22T04:41:41 IST" name="logout" depends-on-groups="createPoll" finished-at="2021-03-22T04:41:42 IST" duration-ms="1355" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logging out]]>
+            </line>
+            <line>
+              <![CDATA[Logged out successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.app.gethyphen.tests.Logout@49c7b90e]" started-at="2021-03-22T04:41:42 IST" name="afterMethod" finished-at="2021-03-22T04:41:42 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logout status=SUCCESS method=Logout.logout()[pri:0, instance:com.app.gethyphen.tests.Logout@49c7b90e] output=Logging out]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.app.gethyphen.tests.Logout -->
       <class name="com.app.gethyphen.tests.LoginOtp">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.app.gethyphen.tests.LoginOtp@14555e0a]" started-at="2021-03-21T00:09:10 IST" name="beforeSuite" finished-at="2021-03-21T00:09:13 IST" duration-ms="2977" status="PASS">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.app.gethyphen.tests.LoginOtp@6f46426d]" started-at="2021-03-22T04:41:12 IST" name="beforeSuite" finished-at="2021-03-22T04:41:19 IST" duration-ms="6809" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Production]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method signature="openLoginPage()[pri:0, instance:com.app.gethyphen.tests.LoginOtp@14555e0a]" started-at="2021-03-21T00:09:13 IST" name="openLoginPage" finished-at="2021-03-21T00:09:20 IST" duration-ms="6569" status="PASS">
+        <test-method signature="openLoginPage()[pri:0, instance:com.app.gethyphen.tests.LoginOtp@6f46426d]" started-at="2021-03-22T04:41:19 IST" name="openLoginPage" finished-at="2021-03-22T04:41:25 IST" duration-ms="6535" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Opening the Sign Up/Log In page]]>
+            </line>
+            <line>
+              <![CDATA[Opened Login Page]]>
+            </line>
+            <line>
+              <![CDATA[Entered email id]]>
+            </line>
+            <line>
+              <![CDATA[Submitted the email id]]>
+            </line>
           </reporter-output>
         </test-method> <!-- openLoginPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.app.gethyphen.tests.LoginOtp@14555e0a]" started-at="2021-03-21T00:09:20 IST" name="afterMethod" finished-at="2021-03-21T00:09:20 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.app.gethyphen.tests.LoginOtp@6f46426d]" started-at="2021-03-22T04:41:25 IST" name="afterMethod" finished-at="2021-03-22T04:41:25 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openLoginPage status=SUCCESS method=LoginOtp.openLoginPage()[pri:0, instance:com.app.gethyphen.tests.LoginOtp@14555e0a] output={null}]]]>
+                <![CDATA[[TestResult name=openLoginPage status=SUCCESS method=LoginOtp.openLoginPage()[pri:0, instance:com.app.gethyphen.tests.LoginOtp@6f46426d] output=Opening the Sign Up/Log In page]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="otpLoginPage()[pri:1, instance:com.app.gethyphen.tests.LoginOtp@14555e0a]" started-at="2021-03-21T00:09:20 IST" name="otpLoginPage" finished-at="2021-03-21T00:09:21 IST" depends-on-methods="com.app.gethyphen.tests.LoginOtp.openLoginPage" duration-ms="1356" status="PASS">
+        <test-method signature="otpLoginPage()[pri:1, instance:com.app.gethyphen.tests.LoginOtp@6f46426d]" started-at="2021-03-22T04:41:25 IST" name="otpLoginPage" finished-at="2021-03-22T04:41:27 IST" depends-on-methods="com.app.gethyphen.tests.LoginOtp.openLoginPage" duration-ms="1467" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Entered the otp]]>
+            </line>
+            <line>
+              <![CDATA[Submitted the otp]]>
+            </line>
           </reporter-output>
         </test-method> <!-- otpLoginPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.app.gethyphen.tests.LoginOtp@14555e0a]" started-at="2021-03-21T00:09:21 IST" name="afterMethod" finished-at="2021-03-21T00:09:21 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.app.gethyphen.tests.LoginOtp@6f46426d]" started-at="2021-03-22T04:41:27 IST" name="afterMethod" finished-at="2021-03-22T04:41:27 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=otpLoginPage status=SUCCESS method=LoginOtp.otpLoginPage()[pri:1, instance:com.app.gethyphen.tests.LoginOtp@14555e0a] output={null}]]]>
+                <![CDATA[[TestResult name=otpLoginPage status=SUCCESS method=LoginOtp.otpLoginPage()[pri:1, instance:com.app.gethyphen.tests.LoginOtp@6f46426d] output=Entered the otp]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.app.gethyphen.tests.LoginOtp -->
-      <class name="com.app.gethyphen.tests.CreatePollTest">
-        <test-method signature="startPoll()[pri:0, instance:com.app.gethyphen.tests.CreatePollTest@4bb33f74]" started-at="2021-03-21T00:09:21 IST" name="startPoll" depends-on-groups="login" finished-at="2021-03-21T00:09:21 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.app.gethyphen.tests.LoginOtp@6f46426d]" started-at="2021-03-22T04:41:42 IST" name="closeBrowser" finished-at="2021-03-22T04:41:43 IST" duration-ms="1007" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startPoll -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.app.gethyphen.tests.CreatePollTest@4bb33f74]" started-at="2021-03-21T00:09:21 IST" name="afterMethod" finished-at="2021-03-21T00:09:21 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.app.gethyphen.tests.LoginOtp -->
+      <class name="com.app.gethyphen.tests.CreatePollTest">
+        <test-method signature="startPoll(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.app.gethyphen.tests.CreatePollTest@73700b80]" started-at="2021-03-22T04:41:27 IST" name="startPoll" data-provider="PollTypes" depends-on-groups="login" finished-at="2021-03-22T04:41:40 IST" duration-ms="13725" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=startPoll status=SUCCESS method=CreatePollTest.startPoll()[pri:0, instance:com.app.gethyphen.tests.CreatePollTest@4bb33f74] output={null}]]]>
+                <![CDATA[Anonymous]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OPEN]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SF Bay Area]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test 103]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Create new post button clicked]]>
+            </line>
+            <line>
+              <![CDATA[The Anonymous type is selected]]>
+            </line>
+            <line>
+              <![CDATA[The Open button is clicked]]>
+            </line>
+            <line>
+              <![CDATA[Clicking the drop down to select group type]]>
+            </line>
+            <line>
+              <![CDATA[Selected the group]]>
+            </line>
+            <line>
+              <![CDATA[Group selected, clicked on Select button]]>
+            </line>
+            <line>
+              <![CDATA[Text is entered in text box]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Publish button]]>
+            </line>
+            <line>
+              <![CDATA[Poll is published]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- startPoll -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.app.gethyphen.tests.CreatePollTest@73700b80]" started-at="2021-03-22T04:41:41 IST" name="afterMethod" finished-at="2021-03-22T04:41:41 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=startPoll status=SUCCESS method=CreatePollTest.startPoll(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.app.gethyphen.tests.CreatePollTest@73700b80] output=Create new post button clicked]]]>
               </value>
             </param>
           </params>

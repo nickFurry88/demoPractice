@@ -61,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>2 groups</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.app.gethyphen.tests.Logout" class="method navigator-link" hash-for-method="logout">logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.app.gethyphen.tests.LoginOtp" class="method navigator-link" hash-for-method="openLoginPage">openLoginPage</a> <!-- method navigator-link -->
@@ -114,7 +119,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.app.gethyphen.tests.CreatePollTest" class="method navigator-link" hash-for-method="startPoll">startPoll</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.app.gethyphen.tests.CreatePollTest" class="method navigator-link" hash-for-method="startPoll(Anonymous, OPEN, SF Bay Area, Test 103)">startPoll(Anonymous, OPEN, SF Bay Area, Test 103)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -154,14 +159,30 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">com.app.gethyphen.tests.Logout</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="logout">
+                  </a> <!-- logout -->
+                  <span class="method-name">logout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.app.gethyphen.tests.CreatePollTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="startPoll">
-                  </a> <!-- startPoll -->
+                  <a name="startPoll(Anonymous, OPEN, SF Bay Area, Test 103)">
+                  </a> <!-- startPoll(Anonymous, OPEN, SF Bay Area, Test 103) -->
                   <span class="method-name">startPoll</span>
+                  <span class="parameters">(Anonymous, OPEN, SF Bay Area, Test 103)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -176,10 +197,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;parameter name=&quot;env&quot; value=&quot;Production&quot;/&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.app.gethyphen.tests.LoginOtp&quot;/&gt;
       &lt;class name=&quot;com.app.gethyphen.tests.CreatePollTest&quot;/&gt;
+      &lt;class name=&quot;com.app.gethyphen.tests.Logout&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -193,7 +216,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -223,6 +246,14 @@
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">logout</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">logout</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -239,24 +270,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'openLoginPage')
-data.setCell(0, 2, 'com.app.gethyphen.tests.LoginOtp')
-data.setCell(0, 3, 6569);
+data.setCell(0, 1, 'startPoll')
+data.setCell(0, 2, 'com.app.gethyphen.tests.CreatePollTest')
+data.setCell(0, 3, 13725);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'otpLoginPage')
+data.setCell(1, 1, 'openLoginPage')
 data.setCell(1, 2, 'com.app.gethyphen.tests.LoginOtp')
-data.setCell(1, 3, 1356);
+data.setCell(1, 3, 6535);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'startPoll')
-data.setCell(2, 2, 'com.app.gethyphen.tests.CreatePollTest')
-data.setCell(2, 3, 11);
+data.setCell(2, 1, 'otpLoginPage')
+data.setCell(2, 2, 'com.app.gethyphen.tests.LoginOtp')
+data.setCell(2, 3, 1467);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'logout')
+data.setCell(3, 2, 'com.app.gethyphen.tests.Logout')
+data.setCell(3, 3, 1355);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -267,16 +302,64 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">openLoginPage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Opening the Sign Up/Log In page</span>
+                <span class="reporter-method-output">Opened Login Page</span>
+                <span class="reporter-method-output">Entered email id</span>
+                <span class="reporter-method-output">Submitted the email id</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">startPoll(Anonymous, OPEN, SF Bay Area, Test 103)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Create new post button clicked</span>
+                <span class="reporter-method-output">The Anonymous type is selected</span>
+                <span class="reporter-method-output">The Open button is clicked</span>
+                <span class="reporter-method-output">Clicking the drop down to select group type</span>
+                <span class="reporter-method-output">Selected the group</span>
+                <span class="reporter-method-output">Group selected, clicked on Select button</span>
+                <span class="reporter-method-output">Text is entered in text box</span>
+                <span class="reporter-method-output">Clicked on Publish button</span>
+                <span class="reporter-method-output">Poll is published</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">otpLoginPage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Entered the otp</span>
+                <span class="reporter-method-output">Submitted the otp</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">logout</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Logging out</span>
+                <span class="reporter-method-output">Logged out successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
+              <span class="ignored-class-name">com.app.gethyphen.tests.Logout</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">closeBrowser</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">com.app.gethyphen.tests.CreatePollTest</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">closeBrowser</span>
+                <br/>
                 <span class="ignored-method-name">beforeSuite</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -291,36 +374,54 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.app.gethyphen.tests.LoginOtp</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
+                <span class="method-name">beforeSuite(Production)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">openLoginPage</span>
-                <span class="method-start">3033 ms</span>
+                <span class="method-start">6847 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=openLoginPage status=SUCCESS method=LoginOtp.openLoginPage()[pri:0, instance:com.ap...)</span>
-                <span class="method-start">9610 ms</span>
+                <span class="method-start">13387 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">otpLoginPage</span>
-                <span class="method-start">9628 ms</span>
+                <span class="method-start">13397 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=otpLoginPage status=SUCCESS method=LoginOtp.otpLoginPage()[pri:1, instance:com.app....)</span>
-                <span class="method-start">10989 ms</span>
+                <span class="method-start">14867 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.app.gethyphen.tests.CreatePollTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">startPoll</span>
-                <span class="method-start">10993 ms</span>
+                <span class="method-name">startPoll(Anonymous, OPEN, SF Bay Area, Test 103)</span>
+                <span class="method-start">14894 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=startPoll status=SUCCESS method=CreatePollTest.startPoll()[pri:0, instance:com.app....)</span>
-                <span class="method-start">11006 ms</span>
+                <span class="method-name">afterMethod([TestResult name=startPoll status=SUCCESS method=CreatePollTest.startPoll(java.lang.String, java.lan...)</span>
+                <span class="method-start">28626 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.app.gethyphen.tests.Logout</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">logout</span>
+                <span class="method-start">28629 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=logout status=SUCCESS method=Logout.logout()[pri:0, instance:com.app.gethyphen.test...)</span>
+                <span class="method-start">29985 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.app.gethyphen.tests.LoginOtp</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">30064 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
