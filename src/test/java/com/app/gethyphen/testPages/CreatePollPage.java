@@ -60,7 +60,7 @@ public class CreatePollPage extends BaseTestPage{
 		createBtn = wait(driver, 4, createBtn);
 		
 		//Verify that Create Button is present
-		Assert.assertTrue(createBtn.isEnabled(), "Test Case 5: The Create new post button is enabled.");
+		Assert.assertTrue(createBtn.isEnabled(), "Test Case 5: The Create new post button is disabled.");
 		if(createBtn.isEnabled()) {
 			createBtn.click();
 			Reporter.log("Create new post button clicked");
@@ -100,7 +100,7 @@ public class CreatePollPage extends BaseTestPage{
 		selInput = wait(driver, 4, selInput);
 		
 		//verify that drop down is enabled
-		Assert.assertTrue(selInput.isEnabled(), "Test Case 6: The drop down is enabled.");
+		Assert.assertTrue(selInput.isEnabled(), "Test Case 6: The drop down is disabled.");
 		
 		//select the value from drop down
 		if(selInput.isEnabled()) {
@@ -139,7 +139,7 @@ public class CreatePollPage extends BaseTestPage{
 		textArea = wait(driver, 4, textArea);
 		
 		//verify that text box is enabled
-		Assert.assertTrue(textArea.isEnabled(), "Test Case 7: The text box is enabled.");
+		Assert.assertTrue(textArea.isEnabled(), "Test Case 7: The text box is disabled.");
 		
 		if(textArea.isEnabled()) {
 			textArea.click();
@@ -151,7 +151,7 @@ public class CreatePollPage extends BaseTestPage{
 	//click Publish post
 	public void publishPost() throws Exception{
 		//verify that the Publish button is enabled
-		Assert.assertTrue(publishBtn.isEnabled(), "Test Case 8: Publish button is enabled.");
+		Assert.assertTrue(publishBtn.isEnabled(), "Test Case 8: Publish button is disabled.");
 		
 		if(publishBtn.isEnabled()) {
 			publishBtn.click();

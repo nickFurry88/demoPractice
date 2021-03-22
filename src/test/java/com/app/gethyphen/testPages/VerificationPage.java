@@ -25,7 +25,7 @@ public class VerificationPage extends BaseTestPage{
 		otpBox = wait(driver, 4, otpBox);
 		
 		// verify OTP box is enabled
-		Assert.assertTrue(otpBox.isEnabled(), "Test Case 3: OTP box is enabled");
+		Assert.assertTrue(otpBox.isEnabled(), "Test Case 3: OTP box is NOT enabled");
 		
 		if(otpBox != null) {
 			otpBox.sendKeys(otp);

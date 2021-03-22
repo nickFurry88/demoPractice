@@ -39,14 +39,14 @@ public class LoginPage extends BaseTestPage{
 		signUpText = wait(driver, 4, signUpText);
         
         //Verify that Sign up/Login message is displayed
-        Assert.assertTrue(signUpText.isEnabled(), "Test Case 1: Login page is opened.");
+        Assert.assertTrue(signUpText.isEnabled(), "Test Case 1: Unable to open Login page.");
 	}
 	
 	// enter Email id
 	public void login(String email) throws Exception{
 		emailBox = wait(driver, 4, emailBox);
 		
-		Assert.assertTrue(emailBox.isEnabled(), "Test Case 2: Email box is editable.");
+		Assert.assertTrue(emailBox.isEnabled(), "Test Case 2: Email box is Un-editable.");
 		
 		if(emailBox != null) {
 			emailBox.sendKeys(email);
@@ -61,7 +61,7 @@ public class LoginPage extends BaseTestPage{
 	public void verifyLoginPage() throws Exception{
 		emailBox = wait(driver, 4, emailBox);
 		
-		Assert.assertTrue(emailBox.isEnabled(), "Test Case 4: LogOut option is working.");
+		Assert.assertTrue(emailBox.isEnabled(), "Test Case 4: LogOut option is NOT working.");
 		
 		if(emailBox != null) {
 			Reporter.log("Logged out successfully");
